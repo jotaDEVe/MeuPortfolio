@@ -1,0 +1,807 @@
+
+
+$green-color: #00ff77;
+$green-gradient: #0f8244;
+$background-color: #202020;
+
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+
+body{
+    background-color: $background-color;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+
+.container {
+    
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 40px 5%
+}
+
+header{
+    a{
+        img{
+            width: 3px;
+        }
+    }
+
+   
+
+    ul{
+        list-style-type: none;
+
+        li{
+            @font-face {
+                font-family: 'De Valencia';
+                src: url(/src/fonts/Valencia.otf);
+            }
+            font-family: 'De Valencia'; 
+            font-size: 36px;
+            display: inline-block;
+            margin: 0px 50px;
+            
+
+            a {
+                background-image: linear-gradient(
+                  to right,
+                  $green-color,
+                  $green-gradient 50%,
+                  #fff 50%
+                );
+                background-size: 200% 100%;
+                background-position: -100%;
+                display: inline-block;
+                padding: 5px 0;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+              }
+              
+              a:before{
+                content: '';
+                background: $green-color;
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                transition: all 0.3s ease-in-out;
+              }
+              
+              a:hover {
+               background-position: 0;
+              }
+              
+              a:hover::before{
+                width: 100%;
+              }
+              
+        }
+    }
+}
+
+a:before{
+    content: "";
+    background: $background-color;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+}
+
+a:hover{
+    background-position: 0;
+}
+
+a:hover::before{
+    width: 100%;
+}
+
+
+.btn:hover::before{
+  box-shadow: 0px 11px 24px #010101;
+}
+
+#particles-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.btn {
+    position: relative;
+    padding: 20px 50px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-font-smoothing: antialiased;
+    
+    &:hover {
+        border: none;
+        color: #00ff77;
+        
+        .line-1 {
+          animation: move1 1500ms infinite ease;
+        }
+        
+        .line-2 {
+          animation: move2 1500ms infinite ease;
+        }
+        
+        .line-3 {
+          animation: move3 1500ms infinite ease;
+        }
+        
+        .line-4 {
+          animation: move4 1500ms infinite ease;
+        }
+      }
+    }
+    
+    .line-1 {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background-color: $green-color;
+      left: 0;
+      bottom: 0;
+    }
+    .line-2 {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: $green-color;
+      left: 0;
+      top: 0;
+    }
+    .line-3 {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background-color: $green-color;
+      right: 0;
+      top: 0;
+    }
+    .line-4 {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      background-color: $green-color;
+      right: 0;
+      bottom: 0;
+    }
+  
+  
+  @keyframes move1 {
+    0% {
+      height: 100%; 
+      bottom: 0;
+    }
+    54% {
+      height: 0; 
+      bottom: 100%;
+    }
+    55% {
+      height: 0; 
+      bottom: 0;
+    }
+    100% {
+      height: 100%; 
+      bottom: 0;
+    }
+  }
+  
+  @keyframes move2 {
+    0% {
+      width: 0;
+      left: 0;
+    }
+    50% {
+      width: 100%; 
+      left: 0;
+    }
+    100% {
+      width: 0; 
+      left: 100%;
+    }
+  }
+  
+  @keyframes move3 {
+    0% {
+      height: 100%; 
+      top: 0;
+    }
+    54% {
+      height: 0; 
+      top: 100%;
+    }
+    55% {
+      height: 0; 
+      top: 0;
+    }
+    100% {
+      height: 100%; 
+      top: 0;
+    }
+  }
+  
+  @keyframes move4 {
+    0% {
+      width: 0; 
+      right: 0;
+    }
+    55% {
+      width: 100%; 
+      right: 0;
+    }
+    100% {
+      width: 0; 
+      right: 100%;
+    }
+  }
+
+#homeIcon{
+    margin-left: 5%;
+    margin-top: 2px;
+    width: 62px;
+    padding: 8px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 0px $green-color;
+    
+    
+
+
+    &:hover{
+      box-shadow: 0 0 0 2px $green-color;
+    }
+
+    
+    
+
+}
+
+
+#textDiv{
+  padding: 0;
+  text-align: left;
+  margin-left: 203px;
+  margin-top: 220px;
+  font-family: 'De Valencia';
+  background: transparent;
+  position: absolute;
+
+}
+
+#helloLine{
+  color: #fff;
+  font-size: 50px
+}
+
+@font-face {
+  font-family: 'mainlux';
+  src: url(/src/fonts/digitype-studio-mainlux-light.otf);
+}
+
+#nameLine{
+  color: #00ff77;
+  font-size: 110px;
+  margin-left: 0px;
+  font-family: 'mainlux', monospace;
+  margin-top: 26px;
+  letter-spacing: 20px;
+  margin-bottom: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::after{
+    content: '|';
+    margin-left: -10px;
+    opacity: 1;
+    animation: blink .6s infinite;
+  }
+}
+
+@keyframes blink {
+  0%, 100%{
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+#devLine{
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 50px;
+}
+
+#githubIcon{
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+  position: absolute;
+  margin-left: 0px;
+  margin-top: -15px;
+}
+
+#linkedinIcon{
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: -15px;
+}
+
+#instagramIcon{
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
+  position: absolute;
+  margin-left: 100px;
+  
+  margin-top: -15px;
+  
+}
+
+
+
+@media (min-width: 100px) and (max-width: 380px){
+  
+  header{
+    position: fixed;
+    position: absolute;
+
+    ul{
+      li{
+        font-size: 30px;
+      }
+    }
+  }
+
+  .btn{
+    margin-top: 0px;
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+
+  header{
+    position: fixed;
+    position: absolute;
+  }
+
+  :root {
+    touch-action: pan-x pan-y;
+    height: 100% 
+  }
+
+  html, body{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+
+  #aboutmeText{
+    margin-bottom: 15px;
+    font-family: 'De Valencia';
+  }
+
+  #stacksText{
+    margin-bottom: 15px;
+  }
+
+ 
+  .btn{
+    padding: 15px 20px;
+  }
+  
+  nav{
+    margin-bottom: 50px;
+   
+  }
+
+  #homeIcon{
+    margin-top: -35px;
+    margin-bottom: 20px;
+  }
+  
+  .flex{
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #textDiv{
+    margin-top: 400px;
+    margin-left: 5%;
+    width: 100%;
+    font-family: 'De Valencia';
+  }
+  
+  #helloLine{
+    color: #fff;
+    font-size: 28px;
+    font-family: 'De Valencia';
+  }
+
+  #nameLine{
+    color: #00ff77;
+    font-size: 40px;
+    margin-left: 0px;
+    font-family: 'mainlux', monospace;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    white-space: normal;
+    overflow: hidden;
+  }
+  
+
+  #devLine{
+    width: 200px;
+    font-size: 28px;
+    font-family: 'De Valencia';
+  }
+}
+
+@media (min-width: 380px) and (max-width: 530px){
+  
+  #githubIcon{
+    width: 20px;
+    height: 20px; 
+    margin-top: -15px;
+    margin-left: 0px;
+  }
+  
+  #linkedinIcon{
+    width: 20px;
+    height: 20px; 
+    margin-top: -15px;
+    margin-left: 35px;
+  }
+  
+  #instagramIcon{
+    width: 25px;
+    height: 25px; 
+    margin-top: -15px;
+    margin-left: 70px;
+  }
+
+  header{
+    position: fixed;
+    position: absolute;
+
+    ul{
+      li{
+        padding: 0px 20px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .btn{
+    margin-top: 0px;
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+
+  :root {
+    touch-action: pan-x pan-y;
+    height: 100% 
+  }
+
+  html, body{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    
+  }
+
+  #aboutmeText{
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+
+  #stacksText{
+    margin-bottom: 10px;
+  }
+
+  .aClass{
+    font-size: 26px;
+  }
+
+ 
+  .btn{
+    padding: 10px 18px;
+    font-size: 8px;
+  }
+  
+  nav{
+    margin-bottom: 30px;
+   
+  }
+
+  #homeIcon{
+    margin-top: -35px;
+    margin-bottom: 0px;
+    padding: 12px;
+  }
+  
+  .flex{
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #textDiv{
+    margin-top: 400px;
+    margin-left: 5%;
+    width: 100%;
+    font-family: 'De Valencia';
+  }
+  
+  #helloLine{
+    color: #fff;
+    font-size: 28px;
+    font-family: 'De Valencia';
+  }
+
+  #nameLine{
+    color: #00ff77;
+    font-size: 44px;
+    margin-left: 0px;
+    font-family: 'mainlux', monospace;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    white-space: normal;
+    overflow: hidden;
+  }
+  
+
+  #devLine{
+    width: 200px;
+    font-size: 28px;
+    font-family: 'De Valencia';
+  }
+}
+
+@media (min-width: 531px) and (max-width: 700px){
+  #githubIcon{
+    width: 20px;
+    height: 20px; 
+    margin-top: -15px;
+  }
+  
+  #linkedinIcon{
+    width: 20px;
+    height: 20px;  
+    margin-top: -15px;
+  }
+  
+  #instagramIcon{
+    width: 25px;
+    height: 25px; 
+    margin-top: -15px; 
+  }
+  
+  .container {
+    
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 0px 5%;
+    
+    ul{
+      li{
+        font-size: 22px;
+        margin: 0px 10px;
+      }
+    }
+  }
+
+
+.btn{
+  padding: 7px 10px;
+  font-size: 7px;
+}
+
+#homeIcon{
+  width: 45px;
+  padding: 8px;
+  background: none;
+}
+
+#textDiv{
+  
+  display: block;
+  margin: 25% 5%;
+
+  #helloLine{
+    font-size: 20px;
+  }
+  
+  #nameLine{
+    font-size: 36px
+  }
+
+  #devLine{
+    font-size: 20px
+  }
+}
+}
+
+@media (min-width: 700px) and (max-width: 1000px){
+  #githubIcon{
+    width: 20px;
+    height: 20px; 
+    margin-top: -15px;
+  }
+  
+  #linkedinIcon{
+    width: 20px;
+    height: 20px; 
+    margin-top: -15px; 
+  }
+  
+  #instagramIcon{
+    width: 25px;
+    height: 25px; 
+    margin-top: -15px; 
+  }
+  
+  
+  .container {
+    
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    padding: 0px 5%;
+    
+    ul{
+      li{
+        font-size: 26px;
+        margin: 0px 10px;
+      }
+    }
+  }
+
+
+.btn{
+  padding: 7px 10px;
+  font-size: 7px;
+}
+
+#homeIcon{
+  width: 45px;
+  padding: 8px;
+  background: none;
+}
+  
+  #textDiv{
+  
+    display: block;
+    margin: 25% 5%;
+  
+    #helloLine{
+      font-size: 30px;
+    }
+    
+    #nameLine{
+      font-size: 60px
+    }
+  
+    #devLine{
+      font-size: 30px
+    }
+  }
+}
+
+@media (min-width: 1240px){
+  #particles-container{
+    width: 100%;
+  }
+
+  #textDiv{
+    display: block;
+    margin: 20% 5%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1240px){
+  #particles-container{
+    width: 100%;
+  }
+
+  #textDiv{
+    display: block;
+    margin: 20% 5%;
+
+    #helloLine{
+      font-size: 34px;
+    }
+
+    #nameLine{
+      font-size: 90px;
+    }
+
+    #devLine{
+      font-size: 34px;
+    }
+  }
+
+  header{
+    ul{
+      li{
+        margin: 0px 30px;
+      }
+    }
+  }
+  
+  .btn{
+    padding: 13px 22px;
+    font-size: 10px;
+  }
+}
+
+  
+
+.spanText{
+  color: $green-color;
+}
+
+

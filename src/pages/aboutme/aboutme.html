@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/src/css/aboutme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="./aboutme.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>Sobre Mim</title>
+</head>
+<body>
+ <header id="header">
+     <div class="container">
+         <div class="flex">
+             <div id="homeDiv">
+                 <a href="/index.html"><img id="homeIcon" src="/src/imgs/home-icon.png" alt="Home"></a>
+             </div>
+             <nav>
+                 <ul>
+                     <li id="aboutmeText"><a href="/src/pages/aboutme/aboutme.html">Sobre Mim</a></li>
+                     <li><a class="aClass" href="/src/pages/stacks/stacks.html">Stacks</a></li>
+                     <li><a class="aClass" href="/src/pages/projects/projects.html">Projetos</a></li>
+                 </ul>
+             </nav>
+             <div class="btn-cont">
+                 <a class="btn" href="/src/pages/contactme/contactme.html">
+                 Contato
+                 <span class="line-1"></span>
+                 <span class="line-2"></span>
+                 <span class="line-3"></span>
+                 <span class="line-4"></span>
+                 </a>
+             </div>
+         </div><!--flex-->
+     </div>
+ </header>
+
+    
+
+    <div id="particles-container">
+        <div data-aos="fade-in" id="secondDiv" class="paragrafoDiv">
+            <p  id="quoteText">" Muito mais do que Desenvolvedor Front-End, me vejo como um exímio apaixonado por todas as formas de criação e expressão, enxergo a engenharia de software como uma composição músical, buscando sempre a harmonia e a perfeição entre a primeira linha de código e a entrega do projeto. "</p>
+        </div>
+        
+        
+        
+        
+        <div data-aos="fade-in" class="scroll"></div>
+
+        <div data-aos="fade-in" id="firstDiv" class="paragrafoDiv">
+            <p  id="paragraphText">Bem-vindo ao <span class="spanText">meu portfólio!</span> Me chamo <span class="spanText">João Vitor</span>, moro em <span class="spanText">São Paulo</span>, tenho <span class="spanText">18 anos</span> e sou apaixonado por <span class="spanText">programação</span>, <span class="spanText">música</span>, <span class="spanText">cinema</span> e <span class="spanText">culinária</span>. Atualmente estou cursando o 1º Semestre de <span class="spanText">Análise e Desenvolvimento de sistemas</span> na Universidade <span class="spanText">Cruzeiro do Sul</span> e estudando novas tecnologias através de <span class="spanText">cursos</span> da web.</p>
+        </div>
+
+        <div data-aos="fade-in" id="jvPicDiv">
+            <img id="jvPic" src="/src/imgs/jv-pic.png" alt="Seu navegador não tem suporte de imagem">
+        </div>
+
+        <div id="musicImgDiv">
+            <img data-aos="fade-in" id="musicImg" src="/src/imgs/guitar-img.svg" alt="Seu navegador não tem suporte para visualizar a imagem">
+        </div>
+        
+        
+        
+        
+    </div>
+
+    <div id="blackContainer">\
+         
+        <h3 data-aos="fade-in" id="openToWork">Estou aberto à:</h3>
+
+        <img data-aos="fade-in" id="checklistImg" src="/src/imgs/checklist-animate.svg" alt="Seu navegador não tem suporte para imagem">    
+        <ul data-aos="fade-in" id="ulCheck">
+            
+            <li class="workTitles">Contratação - PJ</li>
+            <li class="workCondition">└ Remoto ou Híbrido/Presencial em São Paulo/SP</li>
+            <li class="workTitles">Contratação - CLT</li>
+            <li class="workCondition">└ Remoto ou Híbrido/Presencial em São Paulo/SP</li>
+            <li class="workTitles">Projetos Freelance</li>
+            <li class="workCondition">└ <a href="/src/pages/contactme/contactme.html"><span class="contactRedirectLink">Entre em contato</span></a> e faça seu orçamento </li>
+            <br>
+            <li class="workTitles" id="estagio">Estágio</li>
+        </ul>
+
+        <footer class="footer">
+            <div id="btnDiv">
+                <p id="cvText">Baixe o meu Currículo clicando no botão  <span id="spanAbaixo">ao lado:</span></p>
+                <a class="middle" id="cvBtn" href="/src/CV João Vitor de Faria Marques.pdf" download>Clique Aqui!</a>
+            </div>
+        </footer>
+    </div>
+
+  
+</body>
+</html>

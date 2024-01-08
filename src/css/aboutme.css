@@ -1,0 +1,1431 @@
+@charset "UTF-8";
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 250vh;
+}
+html ::-webkit-scrollbar {
+  background: #0f8244;
+  width: 8px;
+}
+html ::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #181818;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background-color: #121212;
+}
+html ::-webkit-scrollbar-thumb:hover:active {
+  background-color: #090909;
+}
+html ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+
+body {
+  background-color: #202020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  padding: 40px 4%;
+}
+
+header a img {
+  width: 3px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  font-family: De Valencia;
+  font-size: 36px;
+  display: inline-block;
+  margin: 0px 50px;
+}
+@font-face {
+  font-family: "De Valencia";
+  src: url(/src/fonts/Valencia.otf);
+}
+header ul li .aClass {
+  background-image: linear-gradient(to right, #00ff77, #0f8244 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+header ul li a:before {
+  content: "";
+  background: #00ff77;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+header ul li a:hover {
+  background-position: 0;
+}
+header ul li a:hover::before {
+  width: 100%;
+}
+
+#aboutmeText {
+  background-image: linear-gradient(to right, #00ff77, #0f8244);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  border-bottom: 3px solid #00ff77;
+}
+
+a:before {
+  content: "";
+  background: #202020;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+.btn:hover::before {
+  box-shadow: 0px 11px 24px #010101;
+}
+
+#particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  position: relative;
+  padding: 20px 50px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-font-smoothing: antialiased;
+}
+.btn:hover {
+  border: none;
+  color: #00ff77;
+}
+.btn:hover .line-1 {
+  animation: move1 1500ms infinite ease;
+}
+.btn:hover .line-2 {
+  animation: move2 1500ms infinite ease;
+}
+.btn:hover .line-3 {
+  animation: move3 1500ms infinite ease;
+}
+.btn:hover .line-4 {
+  animation: move4 1500ms infinite ease;
+}
+
+.line-1 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: #00ff77;
+  left: 0;
+  bottom: 0;
+}
+
+.line-2 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #00ff77;
+  left: 0;
+  top: 0;
+}
+
+.line-3 {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  background-color: #00ff77;
+  right: 0;
+  top: 0;
+}
+
+.line-4 {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: #00ff77;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes move1 {
+  0% {
+    height: 100%;
+    bottom: 0;
+  }
+  54% {
+    height: 0;
+    bottom: 100%;
+  }
+  55% {
+    height: 0;
+    bottom: 0;
+  }
+  100% {
+    height: 100%;
+    bottom: 0;
+  }
+}
+@keyframes move2 {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes move3 {
+  0% {
+    height: 100%;
+    top: 0;
+  }
+  54% {
+    height: 0;
+    top: 100%;
+  }
+  55% {
+    height: 0;
+    top: 0;
+  }
+  100% {
+    height: 100%;
+    top: 0;
+  }
+}
+@keyframes move4 {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  55% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+#homeIcon {
+  margin-top: 2px;
+  width: 62px;
+  padding: 8px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0px #00ff77;
+}
+#homeIcon:hover {
+  box-shadow: 0 0 0 2px #00ff77;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+#jvPic {
+  position: fixed;
+  position: absolute;
+  width: 400px;
+  margin-top: 100px;
+  margin-left: 1120px;
+  border-radius: 250px;
+}
+
+#firstDiv {
+  position: fixed;
+  position: absolute;
+  display: flex;
+  height: 220px;
+  width: 800px;
+  margin-top: 160px;
+  margin-left: 220px;
+}
+#firstDiv #paragraphText {
+  padding: 10px;
+  text-align: left;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 0.3em 0.3em 0.4em black;
+}
+#firstDiv #paragraphText::after {
+  content: "|";
+  margin-left: 0px;
+  opacity: 1;
+  animation: blink 0.6s infinite;
+}
+
+.spanText {
+  color: #00ff77;
+}
+
+#musicImg {
+  position: fixed;
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  margin-top: 800px;
+  margin-left: 200px;
+}
+
+#secondDiv {
+  position: fixed;
+  position: absolute;
+  display: flex;
+  height: 220px;
+  width: 800px;
+  margin-top: 800px;
+  margin-left: 750px;
+}
+#secondDiv p {
+  padding: 10px;
+  text-align: center;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 28px;
+  font-weight: bolder;
+  color: #00ff77;
+}
+#secondDiv p::after {
+  content: "|";
+  margin-left: 0px;
+  opacity: 1;
+  animation: blink 0.6s infinite;
+}
+
+#blackContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, #070707 40%);
+  width: 2000px;
+  height: 2000px;
+  margin-top: 300px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#btnDiv {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0px 1px 6px #00ff77;
+  background-color: #141414;
+  margin-top: 1150px;
+  align-items: center;
+}
+#btnDiv #cvText {
+  display: flex;
+  position: absolute;
+  margin-left: 5%;
+  color: #00ff77;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+#btnDiv #cvBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-family: "De Valencia", monospace;
+  font-size: 50px;
+  font-weight: bold;
+  background-color: #141414;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #00ff77;
+  border: #00ff77 2px solid;
+  width: 450px;
+  height: 100px;
+  margin-left: 30%;
+  margin-top: -150px;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+#btnDiv #cvBtn:hover {
+  color: #141414;
+}
+#btnDiv #cvBtn::before {
+  background: #00ff77;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+#btnDiv #cvBtn::before {
+  width: 0;
+  height: 100%;
+}
+#btnDiv #cvBtn:hover::before {
+  width: 100%;
+}
+
+.scroll {
+  margin-left: 780px;
+  margin-top: 530px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #00ff77;
+  border-radius: 50%;
+  position: relative;
+  position: fixed;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1s infinite;
+}
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #0f8244;
+  border-bottom: 2px solid #0f8244;
+  transform: rotate(-45deg);
+}
+
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+.invisible {
+  visibility: hidden;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 800px;
+  flex-shrink: 0;
+}
+
+#checklistImg {
+  position: fixed;
+  position: absolute;
+  margin-top: 1250px;
+  margin-left: 1070px;
+  width: 500px;
+}
+
+#openToWork {
+  position: fixed;
+  position: absolute;
+  margin-top: 1200px;
+  margin-left: 120px;
+  font-family: "De Valencia", monospace;
+  font-size: 80px;
+  font-weight: bold;
+  color: #ccffe4;
+}
+
+#ulCheck {
+  position: fixed;
+  position: absolute;
+  margin-top: 1420px;
+  margin-left: 100px;
+  color: #ccffe4;
+  font-size: 40px;
+  font-family: "Ysabeau SC", sans-serif;
+}
+#ulCheck li {
+  margin-bottom: 10px;
+}
+
+.workCondition {
+  font-size: 24px;
+  list-style-type: none;
+}
+
+.contactRedirectLink {
+  color: #00ff77;
+  text-decoration: underline;
+  box-shadow: #010101;
+}
+
+#estagio {
+  margin-top: -40px;
+}
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+#spanAbaixo {
+  margin-left: 9px;
+}
+
+@media (max-width: 399px) {
+  #aboutmeText {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  #stacksText {
+    margin-bottom: 10px;
+  }
+  .aClass {
+    font-size: 26px;
+  }
+  .btn {
+    padding: 10px 18px;
+    font-size: 8px;
+  }
+  nav {
+    margin-bottom: 30px;
+  }
+  #homeIcon {
+    margin-top: -35px;
+    margin-bottom: 0px;
+    padding: 12px;
+  }
+  .flex {
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+  }
+  :root {
+    touch-action: pan-x pan-y;
+    height: 100%;
+  }
+  #particles-container {
+    height: 80%;
+  }
+  .scroll {
+    visibility: hidden;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  #jvPicDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  #jvPic {
+    position: absolute;
+    width: 240px;
+    padding: 10px;
+    margin: 50px auto;
+  }
+  #firstDiv {
+    position: absolute;
+    display: block;
+    text-align: center;
+    height: 220px;
+    width: 100%;
+    margin: 320px auto;
+  }
+  #firstDiv #paragraphText {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 0.3em 0.3em 0.4em black;
+  }
+  #firstDiv #paragraphText::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #musicImg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 65px;
+    margin: 530px auto;
+  }
+  #secondDiv {
+    position: fixed;
+    position: absolute;
+    display: block;
+    height: 220px;
+    width: 100%;
+    margin: 1070px auto;
+  }
+  #secondDiv p {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #00ff77;
+  }
+  #secondDiv p::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #openToWork {
+    position: fixed;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 1200px auto;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    color: #ccffe4;
+  }
+  #ulCheck {
+    position: fixed;
+    position: absolute;
+    display: block;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    margin: 1630px auto;
+    color: #ccffe4;
+    font-family: "Ysabeau SC", sans-serif;
+  }
+  #ulCheck li {
+    list-style-type: none;
+    margin-bottom: 25px;
+  }
+  #checklistImg {
+    display: grid;
+    position: absolute;
+    width: 350px;
+    padding: 20px;
+    margin-top: 1280px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  #blackContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, #070707 40%);
+    width: 2000px;
+    height: 2400px;
+    margin-top: 300px;
+  }
+  .workCondition {
+    font-size: 12px;
+    list-style-type: none;
+  }
+  .workTitles {
+    font-size: 28px;
+  }
+  #estagio {
+    margin-top: -40px;
+  }
+  .footer {
+    margin-top: 950px;
+  }
+  #btnDiv {
+    border-radius: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 1px 6px #00ff77;
+    background-color: #141414;
+    margin-top: 1150px;
+    align-items: center;
+  }
+  #btnDiv #cvText {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin: 30px auto;
+    color: #00ff77;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btnDiv #cvText span {
+    display: none;
+  }
+  #btnDiv #cvText span::after {
+    content: "";
+  }
+  #btnDiv #cvBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: #141414;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #00ff77;
+    border: #00ff77 2px solid;
+    width: 320px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 35px;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  #btnDiv #cvBtn:hover {
+    color: #141414;
+  }
+  #btnDiv #cvBtn::before {
+    background: #00ff77;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  #btnDiv #cvBtn::before {
+    width: 0;
+    height: 100%;
+  }
+  #btnDiv #cvBtn:hover::before {
+    width: 100%;
+  }
+}
+@media (min-width: 400px) and (max-width: 699px) {
+  #aboutmeText {
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+  #stacksText {
+    margin-bottom: 15px;
+  }
+  .aClass {
+    font-size: 30px;
+  }
+  .btn {
+    padding: 15px 20px;
+  }
+  nav {
+    margin-bottom: 50px;
+  }
+  #homeIcon {
+    margin-top: -35px;
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+  .flex {
+    display: grid;
+    text-align: center;
+    margin-top: 20px;
+  }
+  :root {
+    touch-action: pan-x pan-y;
+    height: 100%;
+  }
+  #particles-container {
+    height: 80%;
+  }
+  .scroll {
+    visibility: hidden;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  #jvPicDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  #jvPic {
+    position: absolute;
+    width: 290px;
+    padding: 10px;
+    margin: 40px auto;
+  }
+  #firstDiv {
+    position: absolute;
+    display: block;
+    text-align: center;
+    height: 220px;
+    width: 100%;
+    margin: 320px auto;
+  }
+  #firstDiv #paragraphText {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 0.3em 0.3em 0.4em black;
+  }
+  #firstDiv #paragraphText::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #musicImg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 65px;
+    margin: 530px auto;
+  }
+  #secondDiv {
+    position: fixed;
+    position: absolute;
+    display: block;
+    height: 220px;
+    width: 100%;
+    margin: 1070px auto;
+  }
+  #secondDiv p {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #00ff77;
+  }
+  #secondDiv p::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #openToWork {
+    position: fixed;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 1200px auto;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    color: #ccffe4;
+  }
+  #ulCheck {
+    position: fixed;
+    position: absolute;
+    display: block;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    margin: 1630px auto;
+    color: #ccffe4;
+    font-family: "Ysabeau SC", sans-serif;
+  }
+  #ulCheck li {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  #checklistImg {
+    display: grid;
+    position: absolute;
+    width: 350px;
+    padding: 20px;
+    margin-top: 1280px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+  }
+  #blackContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, #070707 40%);
+    width: 2000px;
+    height: 2400px;
+    margin-top: 300px;
+  }
+  .workCondition {
+    font-size: 16px;
+    list-style-type: none;
+  }
+  #estagio {
+    margin-top: -40px;
+  }
+  .footer {
+    margin-top: 950px;
+  }
+  #btnDiv {
+    border-radius: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 1px 6px #00ff77;
+    background-color: #141414;
+    margin-top: 1150px;
+    align-items: center;
+  }
+  #btnDiv #cvText {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin: 30px auto;
+    color: #00ff77;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btnDiv #cvText span {
+    display: none;
+  }
+  #btnDiv #cvText span::after {
+    content: "";
+  }
+  #btnDiv #cvBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: #141414;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #00ff77;
+    border: #00ff77 2px solid;
+    width: 320px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 35px;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  #btnDiv #cvBtn:hover {
+    color: #141414;
+  }
+  #btnDiv #cvBtn::before {
+    background: #00ff77;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  #btnDiv #cvBtn::before {
+    width: 0;
+    height: 100%;
+  }
+  #btnDiv #cvBtn:hover::before {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  header {
+    width: 100%;
+    padding: 40px 4%;
+  }
+  header ul li {
+    font-size: 24px;
+    margin: 0px 10px;
+  }
+  .btn {
+    padding: 7px 10px;
+    font-size: 7px;
+  }
+  #homeIcon {
+    width: 45px;
+    padding: 8px;
+    background: none;
+  }
+  :root {
+    touch-action: pan-x pan-y;
+    height: 100%;
+  }
+  html, body {
+    width: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  html ::-webkit-scrollbar, body ::-webkit-scrollbar {
+    width: 0px;
+  }
+  /* Daqui para baixo a estilização só se aplica a esta página.*/
+  #particles-container {
+    height: 80%;
+  }
+  .scroll {
+    visibility: hidden;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  #jvPicDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  #jvPic {
+    position: absolute;
+    width: 290px;
+    padding: 10px;
+    margin: 40px auto;
+  }
+  #firstDiv {
+    position: absolute;
+    display: block;
+    text-align: center;
+    height: 220px;
+    width: 100%;
+    margin: 320px auto;
+  }
+  #firstDiv #paragraphText {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 0.3em 0.3em 0.4em black;
+  }
+  #firstDiv #paragraphText::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #musicImg {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 65px;
+    margin: 530px auto;
+  }
+  #secondDiv {
+    position: fixed;
+    position: absolute;
+    display: block;
+    height: 220px;
+    width: 100%;
+    margin: 1070px auto;
+  }
+  #secondDiv p {
+    padding: 10px;
+    text-align: center;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #00ff77;
+  }
+  #secondDiv p::after {
+    content: "|";
+    margin-left: 0px;
+    opacity: 1;
+    animation: blink 0.6s infinite;
+  }
+  #openToWork {
+    position: fixed;
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 1200px auto;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    color: #ccffe4;
+  }
+  #ulCheck {
+    position: fixed;
+    position: absolute;
+    display: block;
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+    margin: 1630px auto;
+    color: #ccffe4;
+    font-family: "Ysabeau SC", sans-serif;
+  }
+  #ulCheck li {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  #checklistImg {
+    display: block;
+    position: absolute;
+    width: 720px;
+    padding: 190px;
+    margin-top: 1080px;
+    margin-bottom: 5%;
+    margin-left: -15%;
+  }
+  #blackContainer {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, #070707 40%);
+    width: 2000px;
+    height: 2400px;
+    margin-top: 300px;
+  }
+  .workCondition {
+    font-size: 16px;
+    list-style-type: none;
+  }
+  #estagio {
+    margin-top: -40px;
+  }
+  .footer {
+    margin-top: 950px;
+  }
+  #btnDiv {
+    border-radius: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 1px 6px #00ff77;
+    background-color: #141414;
+    margin-top: 1150px;
+    align-items: center;
+  }
+  #btnDiv #cvText {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin: 30px auto;
+    color: #00ff77;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btnDiv #cvText span {
+    display: none;
+  }
+  #btnDiv #cvText span::after {
+    content: "";
+  }
+  #btnDiv #cvBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: #141414;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #00ff77;
+    border: #00ff77 2px solid;
+    width: 320px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 35px;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  #btnDiv #cvBtn:hover {
+    color: #141414;
+  }
+  #btnDiv #cvBtn::before {
+    background: #00ff77;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  #btnDiv #cvBtn::before {
+    width: 0;
+    height: 100%;
+  }
+  #btnDiv #cvBtn:hover::before {
+    width: 100%;
+  }
+}
+@media (width: 750px) {
+  #checklistImg {
+    margin-top: 1040px;
+    padding: 230px;
+  }
+}
+@media (width: 850px) {
+  #checklistImg {
+    margin-top: 980px;
+    padding: 290px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1260px) {
+  .footer {
+    width: 100%;
+    margin-top: 790px;
+  }
+  #btnDiv {
+    border-radius: 0px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px 1px 6px #00ff77;
+    background-color: #141414;
+    margin-top: 1150px;
+    align-items: center;
+  }
+  #btnDiv #cvText {
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    margin: 30px auto;
+    color: #00ff77;
+    font-family: "Ysabeau SC", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #btnDiv #cvText span {
+    display: none;
+  }
+  #btnDiv #cvText span::after {
+    content: "";
+  }
+  #btnDiv #cvBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-family: "De Valencia", monospace;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: #141414;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #00ff77;
+    border: #00ff77 2px solid;
+    width: 320px;
+    height: 90px;
+    margin-left: 0px;
+    margin-top: 35px;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  #btnDiv #cvBtn:hover {
+    color: #141414;
+  }
+  #btnDiv #cvBtn::before {
+    background: #00ff77;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  #btnDiv #cvBtn::before {
+    width: 0;
+    height: 100%;
+  }
+  #btnDiv #cvBtn:hover::before {
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+  header ul li {
+    margin: 0px 30px;
+  }
+  .btn {
+    font-size: 10px;
+    padding: 13px 22px;
+  }
+  #homeIcon {
+    width: 55px;
+  }
+  #firstDiv {
+    margin-left: 10%;
+  }
+  #firstDiv #paragraphText {
+    font-size: 16px;
+    width: 540px;
+  }
+  #jvPic {
+    margin-top: 6%;
+    width: 300px;
+    margin-left: 65%;
+  }
+  #secondDiv {
+    margin-left: 47%;
+  }
+  #secondDiv #quoteText {
+    font-size: 20px;
+    width: 500px;
+  }
+  #musicImg {
+    margin-left: 6%;
+    width: 400px;
+  }
+  #openToWork {
+    font-size: 55px;
+  }
+  #checklistImg {
+    position: fixed;
+    position: absolute;
+    width: 40%;
+    margin-top: 105%;
+    margin-left: 60%;
+  }
+  #ulCheck {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1260px) and (max-width: 1400px) {
+  .footer {
+    width: 100%;
+  }
+  #cvBtn {
+    margin-left: -200px;
+  }
+  body {
+    width: 100%;
+  }
+  header ul li {
+    margin: 0px 30px;
+  }
+  .btn {
+    font-size: 10px;
+    padding: 13px 22px;
+  }
+  #homeIcon {
+    width: 55px;
+  }
+  #firstDiv {
+    margin-left: 13%;
+  }
+  #firstDiv #paragraphText {
+    font-size: 20px;
+    width: 570px;
+  }
+  #jvPic {
+    margin-top: 6%;
+    width: 300px;
+    margin-left: 65%;
+  }
+  #secondDiv {
+    margin-left: 47%;
+  }
+  #secondDiv #quoteText {
+    font-size: 20px;
+    width: 500px;
+  }
+  #musicImg {
+    margin-left: 6%;
+    width: 400px;
+  }
+  #openToWork {
+    font-size: 55px;
+  }
+  #checklistImg {
+    position: fixed;
+    position: absolute;
+    width: 40%;
+    margin-top: 86%;
+    margin-left: 55%;
+  }
+  #ulCheck {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=aboutme.css.map */
