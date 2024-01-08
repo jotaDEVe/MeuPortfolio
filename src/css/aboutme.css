@@ -469,17 +469,6 @@ a:hover::before {
     transform: translate(0);
   }
 }
-@-webkit-keyframes down {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  40% {
-    transform: translate(0);
-  }
-}
 .invisible {
   visibility: hidden;
 }
@@ -1427,5 +1416,13 @@ a:hover::before {
     font-size: 30px;
   }
 }
-
-/*# sourceMappingURL=aboutme.css.map */
+@media (min-width: 494px) and (max-width: 699px) {
+  header ul li {
+    margin: 0px 100px;
+  }
+}
+@media (width: 700px) {
+  header ul li {
+    margin: 0px 100px;
+  }
+}/*# sourceMappingURL=aboutme.css.map */

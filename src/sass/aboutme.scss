@@ -1766,3 +1766,24 @@ a:hover::before{
     font-size: 30px;
   }
 }
+
+
+@media (min-width: 494px) and (max-width: 699px){
+  header{   
+    ul{
+      li{
+        margin: 0px 100px;
+      }
+    }
+  }
+}
+
+@media (width: 700px){
+  header{   
+    ul{
+      li{
+        margin: 0px 100px;
+      }
+    }
+  }
+}
